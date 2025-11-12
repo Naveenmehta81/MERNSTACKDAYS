@@ -1,0 +1,85 @@
+/* Page setup */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+}
+
+/* Input + Button Row */
+input {
+  padding: 10px 15px;
+  width: 250px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #2ecc71;
+}
+
+/* Add Button */
+.btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+/* List Container */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 330px;
+}
+
+/* List Items */
+li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Delete Button */
+.delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete:hover {
+  background-color: #c0392b;
+}
