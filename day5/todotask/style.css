@@ -1,8 +1,12 @@
 /* Page setup */
+.h1 {
+  text-align: center;
+  }
+  
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f6fa;
+  background-color: #8585f6;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -27,11 +31,30 @@ input:focus {
   border-color: #2ecc71;
 }
 
+.srcbtn {
+  background-color: #0d1216;
+  color: white;
+  border: solid;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.srcbtn:hover {
+  background-color: #2980b9;
+}
+
+
+
+
 /* Add Button */
 .btn {
-  background-color: #3498db;
+  background-color: #0d1216;
   color: white;
-  border: none;
+  border: solid;
   padding: 10px 15px;
   border-radius: 8px;
   font-size: 16px;
@@ -41,20 +64,20 @@ input:focus {
 
 
 .btn:hover {
-  background-color: #2980b9;
+  background-color: #090705;
 }
 
 /* List Container */
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 5px;
   margin-top: 20px;
   width: 330px;
 }
 
 /* List Items */
 li {
-  background-color: #ffffff;
+  background-color: #9d7171;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px 15px;
@@ -66,20 +89,36 @@ li {
 }
 
 li:hover {
-  background-color: #f1f1f1;
+  background-color: #cf5d5d;
 }
 
-/* Delete Button */
-.delete {
+.edit {
   background-color: #e74c3c;
   color: white;
-  border: none;
-  border-radius: 6px;
+border: 1rem solid;
+  border-radius: 10px;
   padding: 6px 10px;
   cursor: pointer;
   transition: 0.3s;
 }
 
+.edit {
+  background-color: #c15f56;
+}
+
+
+/* Delete Button */
+.delete {
+  background-color: #e74c3c;
+  color: white;
+border: 1rem solid;
+  border-radius: 1px;
+  padding: 3px 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 12px;
+}
+
 .delete:hover {
-  background-color: #c0392b;
+  background-color: #2a201f;
 }

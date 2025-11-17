@@ -19,14 +19,14 @@
 // }
 // }
 
-//  function responseside(data){
-//      let newpara = document.createElement('p');
-//      newpara.textContent = `${data?.main?.temp.toFixed(2)} °C`
+ function responseside(data){
+     let newpara = document.createElement('p');
+     newpara.textContent = `${data?.main?.temp.toFixed(2)} °C`
 
-//      document.body.appendChild(newpara);
+     document.body.appendChild(newpara);
 
 
-// }
+}
 
 
 
@@ -49,4 +49,12 @@ try {
 
 
 }
+
+
+
+
+
+
+
+
 

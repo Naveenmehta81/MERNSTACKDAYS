@@ -1,14 +1,23 @@
-let btn = document.querySelector(".btn");
-let input = document.querySelector("input");
-let ul = document.querySelector("ul");
+function setuptodolist(btn , input , ul){
+
 
 btn.addEventListener("click", function() {
     let item = document.createElement('li');
     item.innerHTML = input.value;
+  
+    // edit btn 
 
+    let editbtn = document.createElement('button');
+    editbtn.innerHTML = "edit";
+    editbtn.classList.add("edit");
+   
+      // dlt button 
     let dltbutton = document.createElement('button');
     dltbutton.innerText = "Delete";
     dltbutton.classList.add("delete");
+   
+
+    
 
     
     // dltbutton.addEventListener("click", function() {
@@ -16,6 +25,7 @@ btn.addEventListener("click", function() {
     // });
 
     item.appendChild(dltbutton);
+    item.appendChild(editbtn);
     ul.appendChild(item);
 
     input.value = "";
@@ -27,7 +37,32 @@ ul.addEventListener('click', function(e) {
     if (e.target.classList.contains('delete')) {
         e.target.parentElement.remove(); // removes the clicked <li>
     }
+    
+     if (e.target.classList.contains('edit')) {
+    let li = e.target.parentElement;
+    let oldText = li.firstChild.textContent.trim();
+    let newText = prompt("Edit your task:", oldText);
+
+    if (newText !== null && newText.trim() !== "") {
+      li.firstChild.textContent = newText + " "; // update text
+    }
+  }
+
+
+
+
+
+
 });
+
+}
+export { setuptodolist };
+
+
+
+
+// this for edit 
+
 
 // e stands for event object It contains all details about the click
 // e.target

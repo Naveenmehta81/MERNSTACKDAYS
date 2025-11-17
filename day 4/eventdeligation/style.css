@@ -1,0 +1,51 @@
+table {
+  border-collapse: collapse;
+  margin: 30px auto;
+}
+
+th, td {
+  border: 2px solid black;
+  width: 120px;          
+  height: 120px;         
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+th {
+  background-color: #dcdcdc;
+  font-size: 18px;
+}
+
+td {
+  background-color: #f0f8ff;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional – colors for directions */
+.nw {
+  background-color: lightblue;
+}
+
+.n {
+  background-color: lightgreen;
+}
+
+.ne {
+  background-color: lightpink;
+}
+
+.center {
+  background-color: lavender;
+}
+
+/* ✅ Highlight effect for clicked cell */
+.highlight {
+  background-color: gold !important;
+  color: black;
+  font-weight: bold;
+  border: 3px solid orange;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
