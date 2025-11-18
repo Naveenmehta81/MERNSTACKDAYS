@@ -49,7 +49,7 @@ function loadFromLocalStorage() {
         ul.appendChild(item);
     });
 }
-loadFromLocalStorage();
+loadFromLocalStorage(); 
 
 
 
