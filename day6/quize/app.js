@@ -41,9 +41,29 @@ const question =  [       //  we create array and in array object question and m
 
 const questionElement = document.getElementById("question");   // he tag doubt hai 
 const answerButtons = document.getElementById("answer-here");  // ans button liya 
-const nextButton = document.getElementById("next-btn");    // next button liya 
+const nextButton = document.getElementById("next-btn");    // next button liya
+
+
+function saveResultToLocalStorage(name, score) {
+    let storedResults = JSON.parse(localStorage.getItem('quizResults')) || [];
+
+    storedResults.push({
+        name: name,
+        score: score,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem('quizResults', JSON.stringify(storedResults));
+}
+
+
+
+
+
+
 
  // isme question index and ans cout ho rhe hai to stating me 0 intlized kr diya hai 
+
 let cureentQuestionIndex = 0 ;   
  let score = 0 ;
 
@@ -54,20 +74,21 @@ let cureentQuestionIndex = 0 ;
   nextButton.innerHTML = "next";
     
   showQuestion();
+  console.log("showquestion call hoga abe ")  
    }
 
 function showQuestion(){
     resetstate();
     let currentQuestion = question[cureentQuestionIndex];  
-    let questionNo = cureentQuestionIndex + 1 ;   // it show question no 1 2 3 4 
-    questionElement.innerHTML = questionNo  + " . " + currentQuestion.question ;  // he tag me likha huva h na vo chg hoga 
+    let questionNo = cureentQuestionIndex + 1 ;   //  currentquestionindex hai vo 1 hojaye ga then fir 
+    questionElement.innerHTML = questionNo  + " . " + currentQuestion.question ;  //  yha pr queston no and queston add kr diya hai 
 
 
     currentQuestion.answer.forEach(answer => {     // curent question hai use ans ke under and then itreate hoga 
         const button = document.createElement("button");   
         button.innerHTML = answer.text;   // ans ke under text he usko add kr diya 
-        button.classList.add("btn");
-        answerButtons.appendChild(button);
+        button.classList.add("btn");   // btn ki class add kr di 
+        answerButtons.appendChild(button);  
         if(answer.correct){
             button.dataset.correct = answer.correct;
         }
@@ -110,7 +131,37 @@ function showcore(){
     questionElement.innerHTML = `YOU SCORED ${score} out of ${question.length}!`;
     nextButton.innerHTML = "play again";
     nextButton.style.display = 'block';
+    const name = prompt("Enter your name to save the result:");
+
+    if (name) {
+        saveResultToLocalStorage(name, score);  // Save result to localStorage
+    }
 }
+
+
+
+function showAllResults() {
+    let data = JSON.parse(localStorage.getItem('quizResults')) || [];
+
+    if (data.length === 0) {
+        console.log("No results yet.");
+        return;
+    }
+
+    console.log("🧾 Quiz Results for All Students:");
+    data.forEach((item, index) => {
+        console.log(`${index + 1}. ${item.name} - ${item.score}/${question.length} - ${item.date}`);
+    });
+}
+
+
+
+
+
+
+
+
+
 
 function handleNextButton(){
     cureentQuestionIndex++;
@@ -133,4 +184,8 @@ nextButton.addEventListener("click", ()=>{
     }
 })
 
+
+
+
  starquize();
+ console.log("yha se start huva hai starqiue call huva hia  ")

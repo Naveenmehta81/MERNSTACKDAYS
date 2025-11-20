@@ -2,7 +2,7 @@ const notescontainer = document.querySelector(".note-continer");
 
 const createbtn = document.querySelector(".btn");   
 
-const notes = document.querySelectorAll(".input-box");
+// const notes = document.querySelectorAll(".input-box");
 
 
 function showNotes(){
@@ -37,7 +37,7 @@ notescontainer.addEventListener("click",function(e){
          updatedStorage()
     }
     else if(e.target.tagName == 'p'){
-        notes = document.querySelector(".input-box");
+        notes = document.querySelectorAll(".input-box");
         notes.forEach(nt =>{
             nt.onKeyup = function(){    //.onKeyup: This is a direct property on the HTML element object. 
                                         // Assigning a function to this property sets the code that runs when the keyup event occurs on that element.
@@ -51,7 +51,9 @@ notescontainer.addEventListener("click",function(e){
 
 document.addEventListener("keydown" , event =>{
     if(event.key === "Enter"){
-        document.execCommand("insertLinebreak");
+        document.execCommand("insertLinebreak");   // iska dekhna hai 
         event.preventDefault();
 }
 })
+
+

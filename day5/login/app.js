@@ -1,8 +1,14 @@
-let btn = document.querySelector('.login-btn');
+const emailbox = document.querySelector('.input-box input');
+const passwordbox = document.querySelector('.pass-code input');
+const checkbox = document.querySelector(".remember-row input")
+const loginbtn = document.querySelector('.login-btn');
 
-btn.addEventListener("click", function(event) {
-    event.preventDefault();  // ✔ correct place
-    console.log('clicked');
+
+
+
+loginbtn.addEventListener("click", function(event) {
+            console.log('clicked');
 });
 
 
+console.log(input.value);

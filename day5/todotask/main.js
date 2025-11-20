@@ -1,5 +1,4 @@
-// import {setuptodolist}  from './app.js';
-// import { search } from './search.js';
+/
 
 // get all componet i need to use 
 let btn = document.querySelector(".btn");
@@ -8,9 +7,10 @@ let ul = document.querySelector("ul");
 let searchinp = document.querySelector('.srcinp');
 //let list  = document.querySelectorAll("li");  // chg yha nhi use kiya filter ke under use kr liya 
 
-// button add event listner
 
-// for set task 
+
+// for set task   local storage 
+
 function saveTolocalstorage() {
     let list = ul.querySelectorAll("li");
     let tasks = [];
@@ -50,28 +50,6 @@ function loadFromLocalStorage() {
     });
 }
 loadFromLocalStorage(); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 btn.addEventListener("click", function() {
