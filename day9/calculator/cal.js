@@ -42,13 +42,17 @@ allButtons.forEach(button => {
 
 
 
-// concept used 
-// 1 getElementById , querySelectorAll , queeyselctor  ;
-// 2  foreach()
-// 3 addEventListener
-// 4 event.target , event.value
-// 5 if elseif else 
-// 6 try catch  for = to handel evalution 
-// 7 eval() build in functon to cal all input 
-// 8 slice 
-// 9    display.value += value; in this if i use display.value = value so only 1 one time input i display but if i pres 777 it not possible so i use += 
+// // concept used 
+// // 1 getElementById , querySelectorAll , queeyselctor  ;
+// // 2  foreach()
+// // 3 addEventListener
+// // 4 event.target , event.value
+// // 5 if elseif else 
+// // 6 try catch  for = to handel evalution 
+// // 7 eval() build in functon to cal all input 
+// // 8 slice 
+// // 9    display.value += value; in this if i use display.value = value so only 1 one time input i display but if i pres 777 it not possible so i use += 
+
+
+
+

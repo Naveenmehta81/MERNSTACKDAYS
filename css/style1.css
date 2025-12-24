@@ -1,0 +1,18 @@
+#wrapper{
+          max-height: 100vh;
+          perspective: 10px;
+
+}
+.container{   
+           position: absolute;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100%;
+           transform-style: preserve-3d;
+           z-index: -1;
+}
+
+.backround , .forground{
+    position: absolute
+}

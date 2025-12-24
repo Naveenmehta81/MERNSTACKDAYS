@@ -5,7 +5,7 @@ fetch(`url`), {
      Headers : {         //Extra info about the request — here, it says we are sending JSON
         'Content-Type': 'application/json' 
      }
-     body: JSON.stringify({      // convert JS object to JSON
+    body: JSON.stringify(){      // convert JS object to JSON
     name: 'Naveen Mehta',
     age: 22
     })
